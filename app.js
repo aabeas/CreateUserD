@@ -13,6 +13,12 @@ app.get('/', function(req, res) {
   res.render("userDirectory",{users: data.users})
 })
 
+app.get('/:id', function(req, res) {
+  const id = req.params.id
+  const user = data.user[id-1]
+  res.render("userProfile",{users: user})
+})
+
 app.listen(3000, function () {
   console.log('Successfully started express application!');
 })
