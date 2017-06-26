@@ -1,11 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {{#users}}
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{name}}</title>
+    <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
+    <h1>User Profile</h1>
+      <div class="container">
+        <div class="user-profile">
+          <img src={{avatar}} alt="Image of {{name}}"/>
+          <div class="info-container-01">
+            <div id="nameBig">{{name}}</div>
+            {{#address.city}}
+              <span>{{address.city}},</span>
+            {{/address.city}}
+            {{^address.city}}
+              <span></span>
+            {{/address.city}}
+            {{#address.country}}
+              <span>{{address.country}}</span>
+            {{/address.country}}
+            {{#job}}
+              <span> | {{job}}, {{company}}</span>
+            {{/job}}
+            {{^job}}
+              <span id="available-02"> | Available for hire</span>
+            {{/job}}
+            <br/>
+            {{#email}}
+              <span>{{email}}</span>
+            {{/email}}
+            {{#phone}}
+              <span> | {{phone}}</span>
+            {{/phone}}
+          </div>
+          <div class="info-container-02">
+            {{#university}}
+              <p>Education {{university}}</p>
+            {{/university}}
+            {{^university}}
+              <span></span>
+            {{/university}}
+            {{#skills}}
+              <p>Skills {{skills}}</p>
+            {{/skills}}
+          </div>
+        </div>
+      </div>
+    <footer>
+      <script type="text/javascript"></script>
+    </footer>
   </body>
   {{/users}}
 </html>

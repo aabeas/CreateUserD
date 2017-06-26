@@ -13,12 +13,19 @@ app.get('/', function(req, res) {
   res.render("userDirectory",{users: data.users})
 })
 
-app.get('/:id', function(req, res) {
+// app.get('/:id', function(req, res) {
+//   const id = req.params.id
+//   const user = data.user[id-1]
+//   res.render("userProfile",{users: user})
+// })
+
+app.get('/userProfile/:id', function(req, res) {
   const id = req.params.id
-  const user = data.user[id-1]
+  const user = data.users[id-1]
   res.render("userProfile",{users: user})
+  // res.send("Why is this not posting!!!")
 })
 
-app.listen(3000, function () {
+app.listen(3000, function() {
   console.log('Successfully started express application!');
 })

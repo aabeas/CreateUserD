@@ -55,6 +55,26 @@ h1 {
   margin: 10px;
 }
 
+.user-profile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid gray;
+  background-color: #FFFFFF;
+  width: 700px;
+  padding: 18px;
+  margin: 10px;
+}
+
+.user-profile >img {
+  border: 1px solid gray;
+  border-radius: 100px;
+}
+
+.info-container-01 {
+  padding-left: 25px;
+}
+
 #namePunch {
   font-size: 18px;
   text-align: center;
@@ -63,7 +83,14 @@ h1 {
   color: blue;
 }
 
-#available {
+#nameBig {
+  /*border: 1px solid red;*/
+  font-size: 30px;
+  font-weight: lighter;
+  padding-bottom: 10px;
+}
+
+#available-01 {
   font-size: 15px;
   text-align: center;
   padding: 10px;
@@ -73,11 +100,23 @@ h1 {
   background-color: red;
 }
 
-p {
+#available-02 {
+  font-size: 15px;
+  padding: 1px;
+  color: red;
+}
+
+.user-profile-short >p {
   font-size: 12px;
   text-align: center;
   padding: 1px;
   line-height: 4px;
+  color: black;
+}
+
+div >span {
+  /*border: 1px solid red;*/
+  font-size: 15px;
   color: black;
 }
 
